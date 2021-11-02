@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Post from './components/Post'
+import { useAppdispatch, useAppSelector } from './hooks/redux'
+import { fetchUsers } from './redux/actions/userActions'
 
-interface Props {
-  
-}
+const App: React.FC = () => {
+  const { users, isLoading, error } = useAppSelector(state => state.userReducer)
+  const dispatch = useAppdispatch()
 
-const App = (props: Props) => {
+  useEffect(() => {
+    dispatch(fetchUsers())
+  }, [])
+
+  console.log(users);
+
   return (
     <div>
-      ssfs
+      {/* {isLoading && <h1> Loading... </h1>}
+      {error && <p> {error} </p>}
+      {JSON.stringify(users, null, 10)} */}
+      <Post/>
     </div>
   )
 }

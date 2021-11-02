@@ -1,0 +1,24 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Anastasia",
+            "email": "burmkina@mail.ru"
+        },
+        {
+            "id": 2,
+            "name": "Ellie",
+            "email": "elli@mail.ru"
+        },
+        {
+            "id": 3,
+            "name": "John",
+            "email": "jetamartina@mail.ru"
+        },
+        {
+            "id": 4,
+            "name": "Nick",
+            "email": "netronet@mail.ru"
+        }
+    ]
+}
